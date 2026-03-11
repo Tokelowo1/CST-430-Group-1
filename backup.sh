@@ -17,7 +17,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-ssh "$backupusername@$backupserverip" "mkdir -p $finaldest"
+ssh "$backupusername@$backupserverip" "mkdir -p '$finaldest'"
 if [ $? -ne 0 ]; then
     echo "Cannot create folder"
     exit 1
